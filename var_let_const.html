@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>//global scope 
+        var fname = "My Name Is Vrushika";
+        var fname = "hello";//redclare allowed
+        fname = "Jalgaon";//reassign allowed
+
+        document.write(fname + "<br>");
+    </script>
+
+    <script>//block scope
+        let lname = "Mahajan";
+      // let lname ="Patil";//redclare not allowed
+        lname = "Kulkarni";//reassign allowed
+        document.write(lname + "<br>");
+    </script>
+
+    <script>//block scope
+        const c_name = "TCS";
+       // const c_name ="IBM";//redclare not allowed
+        c_name = "InfoSys";//reassign allowed
+    </script>
+</body>
+
+</html>

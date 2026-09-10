@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Example 1 - Change Text</h3>
+    <h1 id="title"> Hello , Good Morning everyone</h1>
+    <button onclick="changetext()">Change Text</button>
+    <script>
+        function changetext() {
+            document.getElementById('title').innerHTML = 'My name is vrushika';
+        }
+    </script>
+
+    <h3>Example 2 - Change style using DOM</h3>
+    <p id="msg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ipsum excepturi ipsa reiciendis non eligendi
+        quidem
+        laborum praesentium, omnis nisi tenetur voluptate libero doloribus odit deleniti illum suscipit voluptas
+        accusantium.</p>
+    <button onclick="changeColor()">Change Color</button>
+    <script>
+        function changeColor() {
+            document.getElementById('msg').style.color = 'red';
+        }
+    </script>
+    <hr>
+
+    <h3>Example 3- Change Image using dom</h3>
+    <img id="myImg" src="images/rose.jpg" width="300" />
+    <button onclick="changeImage()">Change Image</button>
+    <script>
+        function changeImage() {
+            document.getElementById('myImg').src = "images/sunflower.jpg"
+        }
+    </script>
+    <hr>
+
+    <h3>Get Input From User and Display</h3>
+    <input type="text" id="nameInput" placeholder="Enter Name" />
+    <button onclick="showName()">Submit</button>
+    <h2 id="output"></h2>
+    <script>
+        function showName() {
+            let name = document.getElementById('nameInput').value;
+            document.getElementById('output').innerHTML = 'Hello Welcome ' + name;
+        }
+    </script>
+    <hr>
+
+    <h3>Change Font Size using +,- </h3>
+    <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque rem reiciendis quam, maxime
+        adipisci aut
+        nostrum aperiam esse debitis quaerat, corporis maiores suscipit nisi! Minima fugiat illo magni inventore nulla!
+    </p>
+    <button onclick="increase()">+</button>
+    <button onclick="decrease()">-</button>
+    <script>
+        let size = 16;
+        function increase() {
+            size++;
+
+            document.getElementById('para').style.fontSize = size + 'px';
+        }
+        function decrease() {
+            size--;
+
+            document.getElementById('para').style.fontSize = size + 'px';
+        }
+    </script>
+    <hr>
+
+    <button onclick="ToggleTheme()">ToggleTheme</button>
+    <style>
+        body{
+            background-color: white;color: black; transition: 0.3s;
+        }
+        .dark-mode{
+            background-color: black;
+            color: white;
+        }
+    </style>
+    <script>
+        function ToggleTheme(){
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>
+
+</body>
+
+</html>
